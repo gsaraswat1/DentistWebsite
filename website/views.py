@@ -51,7 +51,7 @@ def appointment(request):
         time = request.POST['your-time']
         message = request.POST['your-message']
         
-        appointment = 'Mr/Mrs/Miss' + name + ' who lives at ' + address + ', has asked for an appointment with you on '+ schedule +' between '+ time +'.\n He has send this messsage for you\n\t\"'+ message + '\" \nYou May Contact them at '+phone +' or ' + email
+        appointment = 'Mr/Mrs/Miss ' + name + ' who lives at ' + address + ', has asked for an appointment with you on '+ schedule +' between '+ time +'.\n He has send this messsage for you\n\t\"'+ message + '\" \nYou May Contact them at '+phone +' or ' + email
         send_mail(
 			'Appointment Request From '+name,
 			appointment,
